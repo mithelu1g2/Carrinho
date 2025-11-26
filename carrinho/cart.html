@@ -1,46 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrinho - Chef Master</title>
 
-  <link rel="stylesheet" href="cart.css">
+  <!-- Importando o CSS da pasta css/ -->
+  <link rel="stylesheet" href="css/cart.css">
 </head>
+
 <body>
 
+  <!-- ⭐ TOPO ESCRITO "CHEFE MASTER" ⭐ -->
   <header class="top-header">
-    <h1>CHEFE MASTER</h1>
+    <h1>CHEF MASTER</h1>
   </header>
 
+  <!-- ⭐ CAIXA CENTRAL DO CARRINHO ⭐ -->
   <div class="cart-container">
 
-    <h2>Seu Carrinho</h2>
+    <h2>Seu Pedido</h2>
 
     <div class="cart-item">
-      <img src="https://via.placeholder.com/120" alt="Produto" />
-      <div class="item-info">
-        <h3>Nome do Prato</h3>
-        <p>Uma breve descrição do prato escolhido pelo cliente.</p>
-        <span class="price">R$ 39,90</span>
+      <h3>Prato Selecionado</h3>
+      <p>Uma breve descrição do produto escolhido pelo cliente.</p>
+      <span class="price">R$ 39,90</span>
+
+      <!-- BOTÕES -->
+      <div class="btn-group">
+        <button class="btn cancelar">Cancelar</button>
+
+        <button class="btn pagar" id="abrirModal">
+          Pagar
+        </button>
+
+        <button class="btn adicionar" onclick="window.location.href='pagina-de-pedidos.html'">
+          Adicionar mais pedidos
+        </button>
       </div>
     </div>
 
-    <div class="buttons">
-      <button id="cancel">Cancelar Pedido</button>
-      <button id="pay">Pagar</button>
-    </div>
-
-    <button id="add-more" class="add-more">Adicionar mais pedidos</button>
-
   </div>
 
-  <script src="cart.js"></script>
+  <!--  MODAL DE PAGAMENTO  -->
+  <div id="modalPagamento" class="modal">
+    <div class="modal-content">
+
+      <h2>Detalhes do Pagamento</h2>
+
+      <p><strong>Produto:</strong> Prato Selecionado</p>
+      <p><strong>Descrição:</strong> Uma descrição mais completa do prato escolhido.</p>
+      <p><strong>Valor Total:</strong> R$ 39,90</p>
+
+      <p><strong>Formas de Pagamento:</strong></p>
+      <ul>
+        <li>Cartão de crédito</li>
+        <li>Pix</li>
+        <li>Dinheiro</li>
+      </ul>
+
+      <button class="btn fechar" id="fecharModal">Fechar</button>
+    </div>
+  </div>
+
+  <!-- Importando o JS da pasta js/ -->
+  <script src="js/cart.js"></script>
 
 </body>
 </html>
-      <h2>Sobre o ChefMaster</h2>
-      <p>
-        No ChefMaster, cada prato é uma celebração da culinária brasileira, preparado com ingredientes frescos e um toque de amor. Venha nos visitar no Shopping Bandeiras, em Campinas, e descubra por que somos o destino favorito para quem busca sabor e qualidade.
-      </p>
-    </section>
