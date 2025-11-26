@@ -1,0 +1,145 @@
+/* ======= BACKGROUND DO SITE ======= */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  /* AQUI VOCÊ TROCA PELA SUA IMAGEM */
+  background: url("bg.jpg") no-repeat center center / cover;
+
+  font-family: "Poppins", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ======= TOPO ======= */
+.top-header {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #000000aa; /* leve transparência */
+  border-bottom: 2px solid #f8d77b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.top-header h1 {
+  color: #f8d77b;
+  font-size: 40px;
+  letter-spacing: 4px;
+  font-weight: 900;
+  margin: 0;
+  text-shadow: 0 0 10px #f8d77b77;
+}
+
+/* ======= CONTAINER DO CARRINHO ======= */
+.cart-container {
+  width: 90%;
+  max-width: 600px;
+  padding: 30px;
+  background: #111c;
+  border: 2px solid #f8d77b;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #f8d77b55;
+
+  margin-top: 150px; /* por causa do header */
+
+  backdrop-filter: blur(4px); /* efeito bonito no fundo */
+}
+
+.cart-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #f8d77b;
+}
+
+/* ======= ITEM DO CARRINHO ======= */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #1a1a1aee;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #f8d77b55;
+}
+
+.cart-item img {
+  width: 130px;
+  border-radius: 10px;
+}
+
+.item-info h3 {
+  margin: 0;
+}
+
+.item-info p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.price {
+  font-weight: bold;
+  color: #f1c65b;
+}
+
+/* ======= BOTÕES ======= */
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 48%;
+  padding: 14px;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#cancel {
+  background: #8b0000;
+  color: white;
+}
+
+#cancel:hover {
+  background: #b30000;
+}
+
+#pay {
+  background: #f8d77b;
+  color: #0b0b0b;
+}
+
+#pay:hover {
+  background: #ffec9e;
+}
+
+/* BOTÃO ADICIONAR MAIS PEDIDOS */
+.add-more {
+  width: 100%;
+  margin-top: 15px;
+  padding: 14px;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 10px;
+  background: transparent;
+  border: 2px solid #f8d77b;
+  color: #f8d77b;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-more:hover {
+  background: #f8d77b;
+  color: #0b0b0b;
+}
