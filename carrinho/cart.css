@@ -1,25 +1,10 @@
-/* ======= BACKGROUND DO SITE ======= */
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
+/* ===== TOPO ===== */
 
-  /* AQUI VOCÊ TROCA PELA SUA IMAGEM */
-  background: url("bg.jpg") no-repeat center center / cover;
-
-  font-family: "Poppins", sans-serif;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* ======= TOPO ======= */
 .top-header {
   width: 100%;
   text-align: center;
   padding: 25px 0;
-  background: #000000aa; /* leve transparência */
+  background: #000;
   border-bottom: 2px solid #f8d77b;
   position: fixed;
   top: 0;
@@ -29,117 +14,139 @@ body {
 
 .top-header h1 {
   color: #f8d77b;
-  font-size: 40px;
-  letter-spacing: 4px;
-  font-weight: 900;
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 3px;
   margin: 0;
-  text-shadow: 0 0 10px #f8d77b77;
 }
 
-/* ======= CONTAINER DO CARRINHO ======= */
+/* ===== FUNDO ===== */
+
+body {
+  background: #000;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== CAIXA DO CARRINHO ===== */
+
 .cart-container {
-  width: 90%;
-  max-width: 600px;
-  padding: 30px;
-  background: #111c;
+  background: #111;
+  width: 600px;       /* CAIXA MAIOR */
+  padding: 45px;      /* CAIXA MAIOR */
+  border-radius: 15px;
   border: 2px solid #f8d77b;
-  border-radius: 20px;
-  box-shadow: 0 0 20px #f8d77b55;
-
-  margin-top: 150px; /* por causa do header */
-
-  backdrop-filter: blur(4px); /* efeito bonito no fundo */
+  color: #f8d77b;
+  margin-top: 120px;
+  box-shadow: 0 0 25px rgba(248, 215, 123, 0.25);
 }
 
 .cart-container h2 {
   text-align: center;
-  margin-bottom: 25px;
   font-size: 28px;
-  color: #f8d77b;
+  margin-bottom: 25px;
 }
 
-/* ======= ITEM DO CARRINHO ======= */
+/* ===== CARD DO PRODUTO ===== */
+
 .cart-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  background: #1a1a1aee;
-  padding: 18px;
-  border-radius: 12px;
-  border: 1px solid #f8d77b55;
+  margin-bottom: 25px;
 }
 
-.cart-item img {
-  width: 130px;
-  border-radius: 10px;
+.cart-item h3 {
+  font-size: 22px;
 }
 
-.item-info h3 {
-  margin: 0;
-}
-
-.item-info p {
-  font-size: 14px;
-  margin: 5px 0;
+.cart-item p {
+  margin: 10px 0;
 }
 
 .price {
+  font-size: 22px;
   font-weight: bold;
-  color: #f1c65b;
+  color: #ffe08c;
 }
 
-/* ======= BOTÕES ======= */
-.buttons {
+/* ===== BOTÕES ===== */
+
+.btn-group {
   margin-top: 25px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 12px;
 }
 
-button {
-  width: 48%;
+.btn {
   padding: 14px;
-  font-size: 17px;
-  font-weight: bold;
-  border: none;
   border-radius: 10px;
+  border: none;
   cursor: pointer;
+  font-size: 17px;
   transition: 0.3s;
 }
 
-#cancel {
-  background: #8b0000;
-  color: white;
+.btn:hover {
+  opacity: 0.85;
 }
 
-#cancel:hover {
-  background: #b30000;
+.cancelar {
+  background: #700;
+  color: #fff;
 }
 
-#pay {
-  background: #f8d77b;
-  color: #0b0b0b;
+.pagar {
+  background: #d7a93f;
+  color: #000;
 }
 
-#pay:hover {
-  background: #ffec9e;
+.adicionar {
+  background: #333;
+  color: #f8d77b;
+  border: 1px solid #f8d77b;
 }
 
-/* BOTÃO ADICIONAR MAIS PEDIDOS */
-.add-more {
+/* ===== MODAL ===== */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin-top: 15px;
-  padding: 14px;
-  font-size: 17px;
-  font-weight: bold;
-  border-radius: 10px;
-  background: transparent;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #111;
+  padding: 35px;
+  width: 500px;
+  border-radius: 15px;
   border: 2px solid #f8d77b;
   color: #f8d77b;
-  cursor: pointer;
-  transition: 0.3s;
+  text-align: left;
 }
 
-.add-more:hover {
-  background: #f8d77b;
-  color: #0b0b0b;
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
+
+.fechar {
+  margin-top: 20px;
+  width: 100%;
+  background: #d7a93f;
+  color: #000;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 17px;
+}
+
