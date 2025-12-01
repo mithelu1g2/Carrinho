@@ -5,20 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrinho - Chef Master</title>
 
-  <!-- Importando o CSS da pasta css/ -->
   <link rel="stylesheet" href="css/cart.css">
 </head>
 
 <body>
 
-  <!-- ⭐ TOPO ESCRITO "CHEFE MASTER" ⭐ -->
+  <!-- TOPO FIXO -->
   <header class="top-header">
-    <h1>CHEF MASTER</h1>
+    <h1>CHEFE MASTER</h1>
   </header>
 
-  <!-- ⭐ CAIXA CENTRAL DO CARRINHO ⭐ -->
-  <div class="cart-container">
+  <!-- IMAGEM DE BACKGROUND ABAIXO DO HEADER -->
+  <div class="background-image"></div>
 
+  <!-- CONTEÚDO CENTRAL -->
+  <div class="cart-container">
     <h2>Seu Pedido</h2>
 
     <div class="cart-item">
@@ -26,14 +27,9 @@
       <p>Uma breve descrição do produto escolhido pelo cliente.</p>
       <span class="price">R$ 39,90</span>
 
-      <!-- BOTÕES -->
       <div class="btn-group">
         <button class="btn cancelar">Cancelar</button>
-
-        <button class="btn pagar" id="abrirModal">
-          Pagar
-        </button>
-
+        <button class="btn pagar" id="abrirModal">Pagar</button>
         <button class="btn adicionar" onclick="window.location.href='pagina-de-pedidos.html'">
           Adicionar mais pedidos
         </button>
@@ -42,10 +38,9 @@
 
   </div>
 
-  <!--  MODAL DE PAGAMENTO  -->
+  <!-- MODAL DETALHADO -->
   <div id="modalPagamento" class="modal">
     <div class="modal-content">
-
       <h2>Detalhes do Pagamento</h2>
 
       <p><strong>Produto:</strong> Prato Selecionado</p>
@@ -59,13 +54,12 @@
         <li>Dinheiro</li>
       </ul>
 
+      <div id="mensagemPagamento" class="mensagem-pagamento"></div>
+
       <button class="btn fechar" id="fecharModal">Fechar</button>
     </div>
   </div>
 
-  <!-- Importando o JS da pasta js/ -->
   <script src="js/cart.js"></script>
-
 </body>
 </html>
-

@@ -1,10 +1,24 @@
-/* ===== TOPO ===== */
+/* ===== BACKGROUND DO SITE (MODIFICADO) ===== */
+body {
+  /* Removido o 'fixed' para que a imagem de fundo role com o conteúdo */
+  background: url("/img/fundo.jpg") no-repeat center center; 
+  background-size: cover;
+  margin:  0;
+  padding: 1px;
+  font-family: Arial, sans-serif;
 
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== TOPO ===== */
 .top-header {
   width: 100%;
   text-align: center;
   padding: 25px 0;
-  background: #000;
+  background: rgba(0, 0, 0, 0.85);
   border-bottom: 2px solid #f8d77b;
   position: fixed;
   top: 0;
@@ -14,74 +28,28 @@
 
 .top-header h1 {
   color: #f8d77b;
-  font-size: 42px;
+  font-size: 48px;
   font-weight: bold;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   margin: 0;
-}
-
-/* ===== FUNDO ===== */
-
-body {
-  background: #000;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-shadow: 0 0 10px #000;
 }
 
 /* ===== CAIXA DO CARRINHO ===== */
-
 .cart-container {
-  background: #111;
-  width: 600px;       /* CAIXA MAIOR */
-  padding: 45px;      /* CAIXA MAIOR */
+  background: rgba(0, 0, 0, 0.85);
+  width: 600px;
+  padding: 45px;
   border-radius: 15px;
   border: 2px solid #f8d77b;
   color: #f8d77b;
-  margin-top: 120px;
-  box-shadow: 0 0 25px rgba(248, 215, 123, 0.25);
-}
-
-.cart-container h2 {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 25px;
-}
-
-/* ===== CARD DO PRODUTO ===== */
-
-.cart-item {
-  margin-bottom: 25px;
-}
-
-.cart-item h3 {
-  font-size: 22px;
-}
-
-.cart-item p {
-  margin: 10px 0;
-}
-
-.price {
-  font-size: 22px;
-  font-weight: bold;
-  color: #ffe08c;
+  /* Garante que a caixa comece abaixo do cabeçalho fixo */
+  margin-top: 120px; 
+  box-shadow: 0 0 25px rgba(248, 215, 123, 0.3);
+  backdrop-filter: blur(4px);
 }
 
 /* ===== BOTÕES ===== */
-
-.btn-group {
-  margin-top: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
 .btn {
   padding: 14px;
   border-radius: 10px;
@@ -89,30 +57,20 @@ body {
   cursor: pointer;
   font-size: 17px;
   transition: 0.3s;
+  font-weight: bold;
 }
 
-.btn:hover {
-  opacity: 0.85;
-}
-
-.cancelar {
-  background: #700;
-  color: #fff;
-}
-
-.pagar {
-  background: #d7a93f;
+.pagar, .fechar, .confirmar-pagamento {
+  background: linear-gradient(45deg, #d7a93f, #f1d27a);
   color: #000;
+  box-shadow: 0 0 10px rgba(255, 215, 100, 0.5);
 }
 
-.adicionar {
-  background: #333;
-  color: #f8d77b;
-  border: 1px solid #f8d77b;
+.confirmar-pagamento:hover {
+  transform: scale(1.03);
 }
 
 /* ===== MODAL ===== */
-
 .modal {
   display: none;
   position: fixed;
@@ -126,27 +84,27 @@ body {
 }
 
 .modal-content {
-  background: #111;
+  background: rgba(17,17,17,0.95);
   padding: 35px;
   width: 500px;
   border-radius: 15px;
   border: 2px solid #f8d77b;
   color: #f8d77b;
-  text-align: left;
+  box-shadow: 0 0 25px rgba(248,215,123,0.3);
+  backdrop-filter: blur(4px);
 }
 
-.modal-content h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.fechar {
+/* ===== MENSAGEM "PEDIDO PAGO" ===== */
+.mensagem-pagamento {
   margin-top: 20px;
-  width: 100%;
-  background: #d7a93f;
-  color: #000;
-  padding: 14px;
+  padding: 18px;
   border-radius: 10px;
-  font-size: 17px;
+  background: rgba(30, 90, 30, 0.9);
+  color: #caffca;
+  display: none;
+  border: 2px solid #5aff5a;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 0 15px rgba(50, 255, 50, 0.4);
 }
-
