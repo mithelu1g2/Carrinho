@@ -75,3 +75,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+document.getElementById('abrirModal').addEventListener('click', function() {
+  var observacoes = document.getElementById('observacoes').value;
+  console.log('Observações do cliente:', observacoes);
+  // Aqui você pode incluir a lógica para enviar as observações junto com o pagamento ou processar de acordo com a necessidade
+});
+
